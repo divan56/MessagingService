@@ -44,8 +44,6 @@ public class EmailServiceImpl implements EmailService {
         helper.setSubject(subject);
         helper.setText(text);
 
-        for (String s : allMailAddressesArr) {
-
             helper.setTo(allMailAddressesArr);
             mailSender.send(message);
 
@@ -66,4 +64,3 @@ public class EmailServiceImpl implements EmailService {
          */
         }
     }
-}
