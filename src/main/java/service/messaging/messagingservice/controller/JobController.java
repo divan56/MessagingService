@@ -25,8 +25,8 @@ public class JobController {
     }
 
     @GetMapping("/job")
-    public List<JobDescriptor> getAllJobs() {
-        return jobService.getAllJobs();
+    public ResponseEntity<List<JobDescriptor>> getAllJobs() {
+        return ResponseEntity.ok(jobService.getAllJobs());
     }
 
     @GetMapping("/job/group/{group}/id/{id}")
